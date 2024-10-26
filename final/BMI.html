@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT&amp;FRESH BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background-color: #4c3a1e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            font-family: 'Rhodium Libre', serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: #fdf5e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Logo */
+        .logo img {
+            height: 60px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #464E2E;
+            color: white;
+        }
+
+        /* Search and Cart */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-bar {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: 'Playfair Display', serif;
+            width: 300px;
+        }
+
+        .username {
+            padding: 8px;
+            background-color: #e8e8e8;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .bmi-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .bmi-section h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .bmi-section .info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .bmi-section .info div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bmi-section .bmi-calculator {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .bmi-calculator h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .bmi-calculator label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .bmi-calculator input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .bmi-calculator button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .bmi-calculator button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            color: #4CAF50;
+        }
+
+        /* Nutrition Knowledge Section */
+        .nutrition-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nutrition-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .nutrition-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .nutrition-carousel .carousel-item {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nutrition-carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .nutrition-carousel button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+        }
+
+        .nutrition-carousel .prev {
+            left: -40px;
+        }
+
+        .nutrition-carousel .next {
+            right: -40px;
+        }
+
+        .nutrition-carousel .dots {
+            margin-top: 20px;
+        }
+
+        .nutrition-carousel .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .nutrition-carousel .dot.active {
+            background-color: #333;
+        }
+
+        /* BMI Classification Section */
+        .bmi-classification-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .bmi-classification-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .bmi-classification-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .bmi-classification-carousel .carousel-item {
+            width: 400px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .bmi-classification-carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bmi-classification-carousel button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+        }
+
+        .bmi-classification-carousel .prev {
+            left: -40px;
+        }
+
+        .bmi-classification-carousel .next {
+            right: -40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        CÙNG CHÚNG TÔI TẬN HƯỞNG GRAND OPENING VỚI NHIỀU ƯU ĐÃI VÔ CÙNG HẤP DẪN!!!
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="hinh/Fit & Fresh Logo (1).png" alt="Fit & Fresh">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SẢN PHẨM</a>
+            <a href="#">THỰC ĐƠN</a>
+            <a href="#">BLOGS/ TIN TỨC</a>
+            <a href="#">FAQs</a>
+            <a href="#">ĐÁNH GIÁ</a>
+        </nav>
+
+        <!-- Search and Cart Section -->
+        <div class="header-right">
+            <a href="">
+                <i class="cart-icon"><img src="icon/account.png" style="width: 40px;"></i>
+            </a>
+            <div class="username">Username</div>
+            <input type="text" class="search-bar" placeholder="Bạn muốn tìm gì?">
+            <a href="">
+                <i class="search-icon"><img src="icon/search.png" style="width: 40px;"></i>
+            </a>
+            <a href="">
+                <i class="cart-icon"><img src="icon/cart (1).png" style="width: 50px;"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- BMI Calculator Section -->
+        <section class="bmi-section">
+            <h1>Tính BMI Online cùng FIT&amp;FRESH</h1>
+            <div class="info">
+                <div>
+                    <h2>BMI là gì?</h2>
+                    <p>BMI là viết tắt của "Body Mass Index" (Chỉ số khối cơ thể), được sử dụng để đánh giá tình trạng cơ thể của một người dựa trên cân nặng và chiều cao. Chỉ số BMI giúp phân loại cơ thể thành các nhóm gầy, bình thường, thừa cân, béo phì...</p>
+                    <ul>
+                        <li>Chỉ số BMI được tính theo công thức: BMI = Cân nặng (kg) / Chiều cao (m)<sup>2</sup></li>
+                        <li>Chiều cao tính bằng mét</li>
+                        <li>Cân nặng tính bằng kg</li>
+                    </ul>
+                </div>
+                <div class="bmi-calculator">
+                    <h2>CÔNG CỤ TÍNH BMI ONLINE</h2>
+                    <p>Công cụ này giúp bạn tính toán chỉ số BMI và phân loại tình trạng cơ thể của bạn.</p>
+                    <label for="height">CHIỀU CAO</label>
+                    <input type="number" id="height" placeholder="Nhập chiều cao của bạn, tính theo cm">
+                    <label for="weight">CÂN NẶNG</label>
+                    <input type="number" id="weight" placeholder="Nhập cân nặng của bạn">
+                    <button>TÍNH BMI NGAY</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Classification Section -->
+        <section class="bmi-classification-section">
+            <h2>Phân Loại BMI - Bảng BMI</h2>
+            <div class="bmi-classification-carousel">
+                <button class="prev">&#8249;</button>
+                <div class="carousel-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/m3X8VPb1jX4AIBMhhlGclXK0G61rQ3oFKhyenCp2CDGspQ1JA.jpg" alt="Person measuring waist">
+                    <h3>Cân nặng thấp &lt; 18.5</h3>
+                    <p>Có thể bạn đang thiếu cân, bạn nên áp dụng các phương pháp ăn uống và tập luyện để tăng cân nhé!</p>
+                </div>
+                <button class="next">&#8250;</button>
+            </div>
+        </section>
+
+        <!-- Nutrition Knowledge Section -->
+        <section class="nutrition-section">
+            <h2>Kiến Thức Dinh Dưỡng Cùng FIT&amp;FRESH</h2>
+            <div class="nutrition-carousel">
+                <button class="prev">&#8249;</button>
+                <div class="carousel-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/GoAfx5YjzbxUK6MzenMkQfwIfa5BN2IwSX1kxZbqKw8qNFqOB.jpg" alt="Person sleeping">
+                    <h3>Lợi ích của việc ngủ đủ giấc</h3>
+                    <p>Ngủ đủ giấc giúp cơ thể bạn phục hồi và phát triển, cải thiện trí nhớ và tăng cường hệ miễn dịch.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/Ap1fC8o2xnWkCSJxPfsPhslanCbuyd05Bgd8q0f947g6mCVnA.jpg" alt="Healthy food">
+                    <h3>Đồ ăn cho người tiểu đường: Lựa chọn thông minh bảo vệ sức khỏe</h3>
+                    <p>Người tiểu đường cần lựa chọn thực phẩm có chỉ số đường huyết thấp, giàu chất xơ và protein để kiểm soát đường huyết.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/JZ1hETikGArecapUbLz3n5TRdWO8h2oidB211Y0YeR1cThqTA.jpg" alt="Vegetarian food">
+                    <h3>Thực phẩm ăn chay: Lành mạnh cho cuộc sống</h3>
+                    <p>Ăn chay không chỉ giúp bạn giảm cân mà còn giảm nguy cơ mắc các bệnh mãn tính và cải thiện tâm trạng.</p>
+                </div>
+                <button class="next">&#8250;</button>
+            </div>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-sm">&copy; 2023 FIT&amp;FRESH. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
