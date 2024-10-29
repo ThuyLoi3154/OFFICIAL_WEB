@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Bánh bao gạo lứt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product_style.css">
+    <link rel="stylesheet" href="headerstyle.css">
+    <link rel="stylesheet" href="similarproduct.css">
+    <script>
+        function swapImage(thumbnail) {
+            // Lấy phần tử mainImage
+            const mainImage = document.getElementById("mainImage");
+            
+            // Lưu lại src của mainImage
+            const mainImageSrc = mainImage.src;
+            
+            // Đổi src của mainImage với src của thumbnail
+            mainImage.src = thumbnail.src;
+            thumbnail.src = mainImageSrc;
+        }
+
+        function increaseQuantity() {
+        const quantityInput = document.getElementById("quantityInput");
+        let currentQuantity = parseInt(quantityInput.value);
+        quantityInput.value = currentQuantity + 1;
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById("quantityInput");
+            let currentQuantity = parseInt(quantityInput.value);
+            // Đảm bảo số lượng không giảm xuống dưới 1
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+        </script>
+</head>
+<body>
+    <div class="top-banner">
+        CÙNG CHÚNG TÔI TẬN HƯỞNG GRAND OPENING VỚI NHIỀU ƯU ĐÃI VÔ CÙNG HẤP DẪN!!!
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="hinh/Fit & Fresh Logo.png" alt="Fit & Fresh" style="height: 70px; width: 120px;">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SẢN PHẨM</a>
+            <a href="#">THỰC ĐƠN</a>
+            <a href="#">BLOGS/ TIN TỨC</a>
+            <a href="#">FAQs</a>
+            <a href="#">ĐÁNH GIÁ</a>
+        </nav>
+
+        <!-- Search and Cart Section -->
+        <div class="header-right">
+            <a href="">
+                <i class="cart-icon"><img src="icon/account.png" style="width: 40px;"></i>
+            </a>
+            <div class="username">Username</div>
+            <input type="text" class="search-bar" placeholder="Bạn muốn tìm gì?">
+            <a href="">
+                <i class="search-icon"><img src="icon/search.png" style="width: 40px;"></i>
+            </a>
+            <a href="">
+                <i class="cart-icon"><img src="icon/cart.png" style="width: 50px;"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="product-detail">
+        <div class="sidebar">
+            <h2 class="sidebar-title">DANH MỤC <span class="arrow">&#x25BC;</span></h2>
+            <hr>
+            <ul class="category-list">
+                <li>MEALS</li>
+                <li>NUTS</li>
+                <li>SNACK</li>
+                <li>MILK</li>
+                <li>BEVERAGE</li>
+            </ul>
+            <span>&nbsp;</span>
+            <h2 class="sidebar-title">GIẢM CÂN LÀNH MẠNH</h2>
+            <hr>
+            <ul class="healthy-weight-loss">
+                <li>
+                    <img src="icon/leaf.png" alt="Combo 1" class="product-thumbnail">
+                    <p>Combo 1 Phần/1 Ngày/5 Ngày <br/> (Bao Gồm Ship)</p>
+                    <span class="price-side">300,000đ</span>
+                </li>
+                <li>
+                    <img src="icon/leaf.png" alt="Combo 2" class="product-thumbnail">
+                    <p>Combo 2 Phần/1 Ngày/5 Ngày (Trưa & Tối) <br/> (Bao Gồm Ship)</p>
+                    <span class="price-side">540,000đ</span>
+                </li>
+                <li>
+                    <img src="icon/leaf.png" alt="Combo 3" class="product-thumbnail">
+                    <p>Combo 3 Phần/1 Ngày/5 Ngày <br/> (Bao Gồm Ship)</p>
+                    <span class="price-side">765,000đ</span>
+                </li>
+                <li>
+                    <img src="icon/leaf.png" alt="Event" class="product-thumbnail">
+                    <p>Phần Ăn Sự Kiện (Event)</p>
+                    <span class="price-side">0đ</span>
+                </li>
+            </ul>
+            <div class="zoom-container">
+                <a href="hinh/Gỏi cuốn healthy.png" target="_blank">
+                    <img src="hinh/poster1.png" alt="Healthy Food" class="zoom-image">
+                </a>
+            </div>
+        </div>
+        <div class="product-image-section">
+            <div class="main-image">
+                <img src="Productimg/meals/banhbao.png" alt="Bánh Bao Gạo Lứt" id="mainImage"/>
+                <i class="fas fa-heart favorite-icon"></i>
+            </div>
+            <div class="thumbnail-images">
+                <img src="Productimg/meals/banhbao1.png" alt="Thumbnail 1" onclick="swapImage(this)"/>
+            </div>
+        </div> 
+        <div class="product-info">
+            <h1>BÁNH BAO GẠO LỨT</h1>
+            <span class="category-tag">MEALS</span>
+            <div class="price">
+                <span>69.000 
+                    <sup class="currency">VND</sup>
+                </span>
+            </div>
+            <div class="quantity-selector">
+                <button class="quantity-btn" onclick="decreaseQuantity()">
+                    <img class="quantity-btnimg" src="icon/tru.png">
+                </button>
+                <input id="quantityInput" class="quantity-input" type="number" value="1" min="1" />
+                <button class="quantity-btn" onclick="increaseQuantity()">
+                    <img class="quantity-btnimg" src="icon/cong.png">
+                </button>
+            </div>
+            <div class="action-buttons">
+                <button class="add-to-cart">THÊM VÀO GIỎ</button>
+                <button class="buy-now">MUA NGAY</button>
+            </div>
+            <details class="product-description">
+                <summary>Thông tin sản phẩm</summary>
+                <p>Bánh bao gạo lứt - Vỏ bánh bao làm từ gạo lứt giàu chất xơ và có thể có nhân thịt, rau củ hoặc trứng. Đây là lựa chọn ít béo, phù hợp cho bữa ăn nhẹ.
+                    <hr/><b>Calo:</b> 200-300 calo/cái
+                </p>
+            </details>
+            <details class="product-description">
+                <summary>Hướng dẫn mua hàng</summary>
+                <p>
+                    <strong>1. Giới thiệu</strong><br/>
+                    Chào mừng quý khách hàng đến với website chúng tôi.
+                    Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần nào trong Điều khoản mua bán hàng hóa này, vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp nhận với những thay đổi đó.
+                    Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
+                </p>
+                <p>
+                    <strong>2. Hướng dẫn sử dụng website</strong><br/>
+                    Khi vào web của chúng tôi, khách hàng phải đảm bảo đủ 18 tuổi, hoặc truy cập dưới sự giám sát của cha mẹ hay người giám hộ hợp pháp. Khách hàng đảm bảo có đầy đủ hành vi dân sự để thực hiện các giao dịch mua bán hàng hóa theo quy định hiện hành của pháp luật Việt Nam.
+                    Trong suốt quá trình đăng ký, quý khách đồng ý nhận email quảng cáo từ website. Nếu không muốn tiếp tục nhận mail, quý khách có thể từ chối bằng cách nhấp vào đường link ở dưới cùng trong mọi email quảng cáo.
+                </p>
+                <p>
+                    <strong>3. Thanh toán an toàn và tiện lợi</strong>
+                    <br/>
+                    Người mua có thể tham khảo các phương thức thanh toán sau đây và lựa chọn áp dụng phương thức phù hợp:
+                    <br/><b>Cách 1:</b>Thanh toán sau (COD - giao hàng và thu tiền tận nơi)
+                    <br/><b>Cách 2:</b>Thanh toán qua chuyển khoản
+                </p>
+            </details>
+            <details class="product-description">
+                <summary>Chính sách kiểm hàng</summary>
+                <p>
+                    <strong>
+                        Quy trình nhận hàng - kiểm hàng:
+                    </strong>
+                    <br/>
+                    <b>Bước 1:</b> Khi nhận hàng, bạn vui lòng kiểm tra kỹ thông tin nhận hàng trên vận đơn dán tại bao bì hộp trước khi nhận hàng và thanh toán (nếu có) để chắc chắn đây là đơn hàng của mình. <br/>
+                    <b>Bước 2:</b> Bạn vui lòng mở hộp và kiểm tra kĩ tất cả các sản phẩm trước mặt đơn vị giao hàng (đồng kiểm), đồng thời quay video trong quá trình mở hộp để làm căn cứ khiếu nại trong trường hợp đơn hàng có sự cố. <br/>
+                    <b>Bước 3:</b>Bạn kiểm tra tình trạng và số lượng của sản phẩm, so sánh với hoá đơn đính kèm (bill). Nếu đúng, các bạn có thể tiến hành nhận hàng và thanh toán (nếu như đơn hàng Ship COD). Lưu ý giữ lại nguyên bill trong trường hợp bạn muốn đổi/ trả hàng hoá. <br/>
+                    <strong>Nếu đơn hàng bị một trong các trường hợp sau:</strong>
+                    <ul typr="dics">
+                        <li>Thừa/ thiếu sản phẩm</li>
+                        <li>Sản phẩm không đúng với đơn hàng đã đặt</li>
+                        <li>Sản phẩm bị hư hỏng khi sử mở bao bì</li>
+                    </ul>
+                    Bạn có thể từ chối nhận hàng và gọi ngay đến Hotline <b>0368459240</b> để được hỗ trợ nhanh nhất nhé ♥️
+                </p>
+            </details>
+            <details class="product-description">
+                <summary>Chính sách đổi trả</summary>
+                <strong>1. Điều kiện đổi trả</strong>
+                <ul type="dics">
+                    <li>Hàng không đúng chủng loại, mẫu mã trong đơn hàng đã đặt hoặc như trên website tại thời điểm đặt hàng.</li>
+                    <li>Không đủ số lượng, không đủ bộ như trong đơn hàng.</li>
+                    <li>Tình trạng bên ngoài bị ảnh hưởng như rách bao bì, bong tróc, bể vỡ….</li>
+                    <li>Hàng hóa bảo hành phải còn nguyên tem sản phẩm và giấy biên nhận chứng minh là quý khách đã mua hàng từ FIT&FRESH.VN.</li>
+                    <li>Khách hàng có trách nhiệm trình giấy tờ liên quan chứng minh sự thiếu sót trên để hoàn thành việc hoàn trả/ đổi trả hàng hóa.</li>
+                </ul>
+                <strong>2. Chính sách đổi trả</strong>
+                <p>
+                    <b>Phạm vi áp dụng:</b> Áp dụng đổi trả hàng trong vòng 48 giờ kể từ khi nhận sản phẩm đối với trường hợp sản phẩm thiếu phụ kiện, quà tặng hoặc bể vỡ.
+                </p>
+                <p>
+                    <b>Thời gian đổi trả: </b> trong vòng 14 ngày kể từ ngày yêu cầu đổi trả hàng.
+                </p>
+                <p>Yêu cầu giữ nguyên bao bì, tem mác của sản phẩm khi đổi trả.</p>
+                <p>Số lần đổi trả cho 1 sản phẩm là 1 lần.</p>
+                <p>Các sản phẩm không được đổi trả: đã hết thời gian đổi trả và các sản phẩm không do lỗi của nhà vận chuyển và không do lỗi của nhà sản xuất.</p>
+                <p>
+                    <i>Chúng tôi cũng rất sẵn lòng lắng nghe các góp ý và yêu cầu của quý khách hàng.
+                        <br/>Quý khách có thể liên hệ số: 0368459240 để đóng góp ý kiến của quý khách về sản phẩm và dịch vụ của chúng tôi.
+                    </i>
+                </p>
+            </details>
+        </div>
+    </main>
+    <section class="similar-products">
+        <center>
+            <hr class="line"/>
+        </center>
+        <h2 class="section-title">MỘT SỐ SẢN PHẨM TƯƠNG TỰ</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Hạt óc chó Mỹ sấy" class="product-image">
+                <p class="product-name">Hạt óc chó Mỹ sấy</p>
+                <p class="product-price">280.000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Hạt óc chó Mỹ sấy" class="product-image">
+                <p class="product-name">Hạt óc chó Mỹ sấy</p>
+                <p class="product-price">280.000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="product3.jpg" alt="Hạt óc chó Mỹ sấy" class="product-image">
+                <p class="product-name">Hạt óc chó Mỹ sấy</p>
+                <p class="product-price">280.000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="product4.jpg" alt="Hạt óc chó Mỹ sấy" class="product-image">
+                <p class="product-name">Hạt óc chó Mỹ sấy</p>
+                <p class="product-price">280.000 VND</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

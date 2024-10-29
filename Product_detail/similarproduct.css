@@ -1,0 +1,52 @@
+/*similar products*/
+.similar-products {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #3b7d5d;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: playfair;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    font-family: montserrat;
+}
+
+.product-card {
+    background-color: #f2efe8;
+    border-radius: 8px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #796149;
+}

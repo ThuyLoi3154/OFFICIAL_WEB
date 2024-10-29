@@ -1,0 +1,313 @@
+/* General Styles */
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('fonts/InstrumentSans-Regular.ttf') format('truetype'); /* Update with the correct path */
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Montserrat', 'Instrument Sans', 'Noto Serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.announcement-bar {
+    background-color: #3b2f1e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 350px;
+    font-family: Montserrat;
+    background-color: #f9f9f9;
+    border: 1px solid  #ddd;
+    margin-top: 0.5%;
+    margin-left: 1%;
+    padding: 20px;
+    height: 955px;
+    position: inherit;
+    overflow-y:auto;
+    text-align: left;
+}
+
+.sidebar-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: 464E2E;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #8b5e3c;
+    margin: 10px 0;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    font-size: 1.1em;
+    color:#e6a158 ;
+    padding: 8px 0;
+    cursor: pointer;
+    border: 1px black;
+    font-weight: bold;
+}
+
+.category-list li:hover {
+    color:rgb(102, 42, 42) ;
+    font-weight: bold;
+}
+.healthy-weight-loss {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.healthy-weight-loss li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.healthy-weight-loss p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+.price-side {
+    font-size: 0.9em;
+    padding-left: 5%;
+    color: #a06a43; /* Màu sắc cho giá */
+    font-weight: bold;
+}
+.zoom-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.zoom-image {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+    transform: scale(1.05); /* Tăng kích thước hình ảnh khi hover */
+}
+/**/
+.product-detail {
+    display: flex;
+    gap: 10px;
+    padding: 30px 20px;
+    max-width: 2300px;
+    margin: 0 auto;
+}
+
+.product-image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image {
+    position:relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width:95%;
+    border-radius: 8px;
+    height: 500px;
+    margin-left: 5%;
+    right: 10%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    color: #333;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 1%;
+}
+
+.thumbnail-images img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin-left: 4%;
+}
+
+.product-info {
+    flex: 1;
+    max-width: 5000px;
+}
+
+.product-info h1 {
+    font-size: 2.4em;
+    font-family: playfair;
+    color: #464E2E;
+    margin-bottom: 10px;
+    margin-top: 1%;
+}
+
+.category-tag {
+    background-color: #75A47F;
+    font-size: larger;
+    font-family: 'Orelega One';
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 2%;
+}
+.currency {
+    font-size: 0.5em;
+    color: #8b5e3c;
+    margin-bottom: -5px; /* Adjust spacing as needed */
+}
+.price {
+    font-size: 2.8em;
+    color: #8b5e3c;
+    margin-bottom: 20px;
+    margin-top: 2%;
+    font-family: playfair;
+    font-weight: bold;
+}
+.price-amount {
+    font-size: 1.5em;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    background-color: white; 
+    border: 0;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-left: 0%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+.quantity-btnimg{
+    background-color: white; 
+    border: 0;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.quantity-input {
+    width: 40px;
+    height: 30px ;
+    text-align: right;
+    margin-left: 1%;
+    border: none;
+    border-bottom: 1px solid #020202;
+    font-size: 1.5em;       
+    margin-bottom: 5%;
+    color: rgb(180, 70, 70);
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart, .buy-now {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: montserrat;
+}
+
+.add-to-cart {
+    background-color: #362706;
+    color: #fff;
+}
+.add-to-cart:hover {
+    background-color: #b4b4b2;
+    color: black;
+}
+.add-to-cart:active{
+    background-color: gray;
+    color:white;
+}
+.buy-now {
+    background-color: #464E2E;
+    color: #fff;
+}
+.buy-now:hover {
+    background-color: blanchedalmond;
+    color: black;
+}
+.buy-now:active {
+    background-color: rgb(154, 115, 57);
+    color: #fff;
+}
+.product-description {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-family: montserrat;
+    font-size: 1.2em;
+}
+
+.product-description summary {
+    font-weight: bold;
+    color: #3b2f1e;
+    cursor: pointer;
+}
+.line{
+    width: 80%;
+}
