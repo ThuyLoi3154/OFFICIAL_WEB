@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -5,195 +6,9 @@
     <title>FIT&amp;FRESH TDEE Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .header {
-            background-color: #fdf5e6;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .logo img {
-            height: 60px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 15px;
-            font-family: playfair;
-            font-size: 20px;
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: #000;
-            font-size: 15px;
-            padding: 5px 10px;
-            transition: background-color 0.3s ease;
-        }
-        .nav-menu a:hover {
-            background-color: #464E2E;
-            color: white;
-        }
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .search-bar {
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-            font-family: playfair;
-            width: 300px;
-        }
-        .username {
-            padding: 8px;
-            background-color: #e8e8e8;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: playfair;
-        }
-        .main-content {
-            padding: 2rem 0;
-        }
-        .main-content section {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        .main-content h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .main-content h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .main-content p, .main-content ul {
-            margin-bottom: 1rem;
-        }
-        .main-content ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-        }
-        .main-content form {
-            display: grid;
-            gap: 1rem;
-        }
-        .main-content form select, .main-content form input, .main-content form button {
-            width: 100%;
-            border: 1px solid #d1d5db;
-            border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
-        }
-        .main-content form button {
-            background-color: #4caf50;
-            color: #ffffff;
-        }
-        .main-content .exercise-levels button {
-            width: 2.5rem;
-            height: 2.5rem;
-            border: 1px solid #d1d5db;
-            border-radius: 0.5rem;
-        }
-        .nutrition-section {
-            background-color: #f0f4c3;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
-        .nutrition-section h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .nutrition-section .container {
-            display: flex;
-            overflow-x: auto;
-            gap: 1rem;
-        }
-        .nutrition-section .card {
-            min-width: 300px;
-            background-color: #ffffff;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        .nutrition-section .card img {
-            width: 100%;
-            height: 10rem;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .nutrition-section .card h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .nutrition-section .card p {
-            color: #4a4a4a;
-        }
-        .nutrition-section .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        .nutrition-section .pagination button {
-            width: 2rem;
-            height: 2rem;
-            border: 1px solid #d1d5db;
-            border-radius: 0.5rem;
-        }
-        .footer {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 2rem 0;
-        }
-        .footer .container {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: 1fr;
-        }
-        .footer h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .footer .social-icons a {
-            color: #ffffff;
-            margin-right: 1rem;
-        }
-        .footer .quick-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .footer .quick-links ul li {
-            margin-bottom: 0.5rem;
-        }
-        .footer .quick-links ul li a {
-            color: #ffffff;
-        }
-        .footer form input, .footer form textarea, .footer form button {
-            width: 100%;
-            border: 1px solid #d1d5db;
-            border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
-            margin-bottom: 1rem;
-        }
-        .footer form button {
-            background-color: #4caf50;
-            color: #ffffff;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/TDEE.css" type="text/css">
+    <link rel="stylesheet" href="CSS/header.css" type="text/css">
 </head>
 <body class="bg-gray-100">
     <!-- Top Banner -->
@@ -238,9 +53,9 @@
         <section class="bg-white p-8 rounded-lg shadow-md">
             <h1 class="text-2xl font-bold text-center mb-6">Tính TDEE Online cùng FIT&amp;FRESH</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
+                <div class="tdee-info">
                     <h2 class="text-xl font-bold mb-4">TDEE là gì?</h2>
-                    <p class="mb-4">TDEE (Total Daily Energy Expenditure) là tổng năng lượng bạn tiêu thụ mỗi ngày. Nó bao gồm năng lượng tiêu thụ khi nghỉ ngơi, năng lượng tiêu thụ khi hoạt động và năng lượng tiêu thụ khi tiêu hóa thức ăn.</p>
+                    <p class="mb-4"><b>TDEE (Total Daily Energy Expenditure)</b> là tổng năng lượng bạn tiêu thụ mỗi ngày. Nó bao gồm năng lượng tiêu thụ khi nghỉ ngơi, năng lượng tiêu thụ khi hoạt động và năng lượng tiêu thụ khi tiêu hóa thức ăn.</p>
                     <p class="mb-4">Việc tính toán TDEE giúp bạn biết được lượng calo cần thiết để duy trì cân nặng hiện tại, giảm cân hoặc tăng cân.</p>
                     <h2 class="text-xl font-bold mb-4">Tại sao bạn cần phải tính toán?</h2>
                     <p class="mb-4">Việc tính toán TDEE giúp bạn có kế hoạch ăn uống và luyện tập hợp lý, trong đó:</p>
@@ -250,90 +65,122 @@
                         <li>Giúp bạn tăng cân một cách lành mạnh.</li>
                     </ul>
                     <p class="mb-4">Hãy sử dụng công cụ tính TDEE của FIT&amp;FRESH để có kế hoạch dinh dưỡng và luyện tập phù hợp nhất cho bạn.</p>
+                    <div class="image-row">
+                        <img src="https://i.pinimg.com/564x/e8/31/2b/e8312b7b562b9d75aca34bdc7fdef725.jpg" width="250" alt="TDEE Image 1">
+                        <img src="https://i.pinimg.com/564x/36/5b/04/365b04d5fe3cc81f8393960ea0199796.jpg" width="250" alt="TDEE Image 2">
+                    </div>
                 </div>
                 <div>
                     <h2 class="text-xl font-bold mb-4">Công cụ tính TDEE Online</h2>
-                    <form class="space-y-4">
+                    <form onsubmit="calculateTDEE(event)" class="space-y-4">
                         <div>
                             <label class="block text-gray-700">Mục tiêu</label>
-                            <select class="w-full border border-gray-300 rounded-lg px-4 py-2">
-                                <option>Giảm cân</option>
-                                <option>Duy trì cân nặng</option>
-                                <option>Tăng cân</option>
+                            <select id="goal" class="custom-select">
+                                <option value="lose">Giảm cân</option>
+                                <option value="maintain">Duy trì cân nặng</option>
+                                <option value="gain">Tăng cân</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-gray-700">Giới tính</label>
-                            <select class="w-full border border-gray-300 rounded-lg px-4 py-2">
-                                <option>Nam</option>
-                                <option>Nữ</option>
+                            <select id="gender" class="custom-select">
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
                             </select>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-gray-700">Chiều cao (cm)</label>
-                                <input class="w-full border border-gray-300 rounded-lg px-4 py-2" type="number"/>
+                                <input type="number" id="height" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Nhập chiều cao của bạn (tính theo cm)">
                             </div>
                             <div>
                                 <label class="block text-gray-700">Cân nặng (kg)</label>
-                                <input class="w-full border border-gray-300 rounded-lg px-4 py-2" type="number"/>
+                                <input type="number" id="weight" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Nhập cân nặng của bạn (tính theo kg)">
                             </div>
                         </div>
                         <div>
                             <label class="block text-gray-700">Cường độ tập luyện</label>
                             <div class="exercise-levels flex space-x-2">
-                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button">1</button>
-                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button">2</button>
-                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button">3</button>
-                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button">4</button>
-                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button">5</button>
+                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button" onclick="selectLevel(1)">1</button>
+                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button" onclick="selectLevel(2)">2</button>
+                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button" onclick="selectLevel(3)">3</button>
+                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button" onclick="selectLevel(4)">4</button>
+                                <button class="w-10 h-10 border border-gray-300 rounded-lg" type="button" onclick="selectLevel(5)">5</button>
                             </div>
+                            <div class="description" id="exercise-description">Select an exercise level to see the description.</div>
                         </div>
                         <div>
                             <label class="block text-gray-700">Tuổi</label>
-                            <input class="w-full border border-gray-300 rounded-lg px-4 py-2" type="number"/>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700">Tốc độ tăng/giảm cân</label>
-                            <select class="w-full border border-gray-300 rounded-lg px-4 py-2">
-                                <option>Nhanh</option>
-                                <option>Vừa phải</option>
-                                <option>Chậm</option>
-                            </select>
+                            <input id="age" type="number" class="w-full border border-gray-300 rounded-lg px-4 py-2">
                         </div>
                         <button class="w-full bg-green-500 text-white py-2 rounded-lg" type="submit">Tính TDEE Ngay</button>
                     </form>
+                    <div id="tdee-result" class="mt-4 text-center font-bold text-lg text-green-600"></div>
                 </div>
             </div>
         </section>
-        <section class="nutrition-section bg-green-100 py-8 mt-8">
-            <h2 class="text-2xl font-bold text-center mb-6">Kiến Thức Dinh Dưỡng Cùng FIT&amp;FRESH</h2>
-            <div class="container mx-auto">
-                <div class="flex space-x-4 overflow-x-auto">
-                    <div class="card min-w-[300px] bg-white p-4 rounded-lg shadow-md">
-                        <img alt="Người ngủ" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="https://photo.znews.vn/w660/Uploaded/sgorvz/2023_12_12/giac_ngu_ngon_1.jpg" width="300"/>
-                        <h3 class="text-lg font-bold mb-2">Lợi ích của việc ngủ đủ giấc</h3>
-                        <p class="text-gray-700">Ngủ đủ giấc giúp cơ thể phục hồi và tăng cường sức khỏe.</p>
-                    </div>
-                    <div class="card min-w-[300px] bg-white p-4 rounded-lg shadow-md">
-                        <img alt="Đồ ăn người tập thể dục" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="https://cafefcdn.com/203337114487263232/2023/11/20/photo-1-17003936992701166457638-1700440123201-17004401233011014909908.jpg" width="300"/>
-                        <h3 class="text-lg font-bold mb-2">Đồ ăn cho người tập thể dục: Lựa chọn tốt nhất</h3>
-                        <p class="text-gray-700">Lựa chọn thực phẩm phù hợp giúp tăng cường hiệu quả tập luyện.</p>
-                    </div>
-                    <div class="card min-w-[300px] bg-white p-4 rounded-lg shadow-md">
-                        <img alt="Thực phẩm chay" class="w-full h-40 object-cover rounded-lg mb-4" height="200" src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/4/20/an-chay-1-16820038474021468234609.jpg" width="300"/>
-                        <h3 class="text-lg font-bold mb-2">Thực phẩm ăn chay: Lành mạnh cho cuộc sống</h3>
-                        <p class="text-gray-700">Ăn chay giúp cải thiện sức khỏe và bảo vệ môi trường.</p>
-                    </div>
-                </div>
-                <div class="pagination flex justify-center mt-4">
-                    <button class="w-8 h-8 border border-gray-300 rounded-lg">1</button>
-                    <button class="w-8 h-8 border border-gray-300 rounded-lg">2</button>
-                    <button class="w-8 h-8 border border-gray-300 rounded-lg">3</button>
-                </div>
-            </div>
-        </section>
+        <script>
+            // Descriptions for each level
+            let selectedActivityLevel = 1; // Default to level 1
+            const descriptions = {
+                1: "Level 1: Light activity, suitable for beginners.",
+                2: "Level 2: Moderate activity, recommended for regular exercisers.",
+                3: "Level 3: Vigorous activity, suitable for experienced exercisers.",
+                4: "Level 4: High-intensity workouts, for advanced fitness enthusiasts.",
+                5: "Level 5: Very high-intensity workouts, recommended for athletes."
+            };
+
+            function selectLevel(level) {
+                selectedActivityLevel = level;
+                // Deselect all buttons
+                const buttons = document.querySelectorAll('.exercise-levels button');
+                buttons.forEach(button => button.classList.remove('selected'));
+
+                // Select the clicked button
+                buttons[level - 1].classList.add('selected');
+
+                // Update the description
+                const descriptionBox = document.getElementById('exercise-description');
+                descriptionBox.textContent = descriptions[level];
+            }
+
+            function calculateTDEE(event) {
+                event.preventDefault(); // Prevent form submission
+
+                const gender = document.getElementById("gender").value;
+                const height = parseFloat(document.getElementById("height").value);
+                const weight = parseFloat(document.getElementById("weight").value);
+                const age = parseInt(document.getElementById("age").value);
+                const goal = document.getElementById("goal").value;
+
+                if (isNaN(height) || isNaN(weight) || isNaN(age)) {
+                    alert("Vui lòng nhập tất cả thông tin hợp lệ.");
+                    return;
+                }
+
+                // BMR Calculation
+                let bmr;
+                if (gender === "male") {
+                    bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+                } else {
+                    bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+                }
+
+                // Activity multipliers for each exercise level
+                const activityMultipliers = [1.2, 1.375, 1.55, 1.725, 1.9];
+                let tdee = bmr * activityMultipliers[selectedActivityLevel - 1];
+
+                // Adjust TDEE based on goal
+                if (goal === "gain") tdee += 500;
+                else if (goal === "lose") tdee -= 500;
+
+                // Display result
+                document.getElementById("tdee-result").textContent = `TDEE của bạn là: ${tdee.toFixed(2)} kcal/ngày`;
+            }
+        </script>
+        <p><i>Để đạt được độ chính xác cao nhất hãy đo lại TDEE khi bạn thay đổi sinh hoạt hoặc thay đổi thể trạng nhé! Bạn hãy lưu trang này, để mỗi khi cần có thể truy cập nhanh chóng nhé!</i></p>
     </main>
+
     <!-- Footer -->
     <footer class="footer bg-black text-white py-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -366,4 +213,6 @@
                 </form>
             </div>
         </div>
-    </footer
+    </footer>
+</body>
+</html>

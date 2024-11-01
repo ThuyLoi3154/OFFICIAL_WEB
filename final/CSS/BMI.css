@@ -1,0 +1,308 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc0e;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #4c3a1e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+.header {
+    background-color: #fdf5e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #464E2E;
+    color: white;
+}
+
+/* Search and Cart */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    width: 300px;
+}
+
+.username {
+    padding: 8px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* BMI Section */
+.bmi-section {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.bmi-section h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Định dạng bố cục giữa hai ô */
+.bmi-section .info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Điều chỉnh độ rộng của phần "BMI là gì?" */
+.bmi-section .info div:first-child {
+    background-color: #fcfff6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Giảm chiều rộng cho phần "BMI là gì?" */
+    max-width: 600px;
+}
+
+.bmi-section .bmi-calculator {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bmi-calculator h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.bmi-calculator label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bmi-calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #4CAF50;
+}
+
+/* Nutrition Knowledge Section */
+.nutrition-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nutrition-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.nutrition-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.nutrition-carousel .carousel-item {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.nutrition-carousel button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+.nutrition-carousel .prev {
+    left: -40px;
+}
+
+.nutrition-carousel .next {
+    right: -40px;
+}
+
+.nutrition-carousel .dots {
+    margin-top: 20px;
+}
+
+.nutrition-carousel .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nutrition-carousel .dot.active {
+    background-color: #333;
+}
+
+li {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+#result-section {
+    margin-top: 20px;
+    text-align: center; /* Căn giữa nội dung trong phần */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa phần tử theo chiều ngang */
+}
+/* Box for Result Section */
+.result-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 10px auto; /* Center the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header with Icon */
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.result-icon {
+    width: 50px;
+    height: 50px;
+}
+#bmi-image {
+    width: 80%; /* Đặt ảnh chiếm 80% chiều rộng của box chứa */
+    max-width: 600px; /* Đặt kích thước tối đa cho ảnh */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    display: none;
+    margin-top: 10px;
+}
+.custom-bmi-button {
+    background-color: #434747; /* Teal background */
+    color: #f5b400; /* Yellow text color */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px; /* Rounded corners on the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-bmi-button:hover {
+    background-color: #3c403adf; /* Darker teal on hover */
+}
+
+.custom-bmi-button:focus {
+    outline: none; /* Remove default outline */
+}
+

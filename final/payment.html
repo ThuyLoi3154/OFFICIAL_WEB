@@ -8,91 +8,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>Header Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Top Banner */
-        .top-banner {
-            background-color: #4c3a1e;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 16px;
-            font-family: Rhodium Libre;
-        }
-
-        /* Header */
-        .header {
-            background-color: #fdf5e6;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        /* Logo */
-        .logo img {
-            height: 60px;
-        }
-
-        /* Navigation Menu */
-        .nav-menu {
-            display: flex;
-            gap: 15px;
-            font-family: playfair;
-            font-size:20px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #000;
-            font-size: 15px;
-            padding: 5px 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-            background-color: #464E2E;
-            color: white;
-        }
-
-        /* Search and Cart */
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .search-bar {
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-            font-family: playfair;
-            width: 300px;
-        }
-
-        .username {
-            padding: 8px;
-            background-color: #e8e8e8;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: playfair;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/payment.css" type="text/css">
 </head>
 <body>
-
     <!-- Top Banner -->
     <div class="top-banner">
         CÙNG CHÚNG TÔI TẬN HƯỞNG GRAND OPENING VỚI NHIỀU ƯU ĐÃI VÔ CÙNG HẤP DẪN!!!
     </div>
-
     <!-- Header -->
     <header class="header">
         <div class="logo">
@@ -128,19 +52,15 @@
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: 'Roboto', sans-serif;
-        }
-  </style>
+
  </head>
  <body class="bg-gray-100">
   <div class="max-w-4xl mx-auto p-4 bg-white shadow-md">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="bg-yellow-50 flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-md p-8 bg-white shadow-md">
+<body>
+    <div>
         <h1 class="text-3xl font-bold text-center mb-4">Thanh toán</h1>
         <div class="text-center text-lg mb-6">
             <i class="fas fa-map-marker-alt text-red-500"></i>
@@ -213,7 +133,7 @@
      FIT&amp;FRESH
     </h2>
     <div class="flex items-center mt-4">
-     <img alt="Salad tôm" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/cKJ77xIpKx7zC56Z83b7mEtwDSMezF5j7aj3639CRAFbeSpTA.jpg" width="100"/>
+     <img alt="Salad tôm" class="w-24 h-24 object-cover rounded" height="100" src="hinh/Salad tôm.png"/ width="400px">
      <div class="ml-4">
       <h3 class="text-lg font-semibold">
        Sản phẩm: Salad tôm
@@ -234,9 +154,10 @@
     </div>
    </div>
    <div class="mt-6 p-4 bg-gray-100 border border-gray-300 rounded">
-    <h3 class="text-lg font-semibold">
+<input class="mr-2" type="checkbox"/>
+    <span>
      Bảo hiểm thiệt hại sản phẩm
-    </h3>
+    </span>
     <p class="text-gray-600">
      Bảo vệ sản phẩm được bảo hiểm nếu thiệt hại do sơ suất khi ngửi, sấy hoặc các chất lỏng hoặc hơi nóng trong quá trình sử dụng.
     </p>
@@ -253,34 +174,36 @@
     <div class="max-w-4xl mx-auto bg-white p-4 border border-gray-300">
      <div class="grid grid-cols-2 gap-4">
       <!-- Discount Codes Section -->
-      <div class="border border-gray-300 p-4">
-       <h2 class="text-lg font-bold text-red-600 mb-4">
-        <i class="fas fa-tags">
-        </i>
-        Danh sách mã giảm giá hiện có
+    </div>
+        <div class="voucher-bar">
+            <div class="voucher-icon">
+                <i>🏷️</i> <!-- Using an emoji for the voucher icon -->
+                <span class="voucher-text">Voucher của shop</span>
+            </div>
+            <div class="select-text">
+                Chọn hoặc nhập mã <span>&#8250;</span> <!-- Right arrow -->
+            </div>
+        </div>
+        <div>Danh sách mã giảm giá hiện có</div>
        </h2>
-       <ul class="space-y-2">
-        <li class="flex items-center">
-         <i class="fas fa-ticket-alt text-green-600 mr-2">
-         </i>
-         Giảm 15k cho đơn hàng có giá trị trên 100k (Mã: GIAM15).
-        </li>
-        <li class="flex items-center">
-         <i class="fas fa-ticket-alt text-green-600 mr-2">
-         </i>
-         Giảm 35k cho đơn hàng có giá trị trên 200k (Mã: GIAM35).
-        </li>
-        <li class="flex items-center">
-         <i class="fas fa-ticket-alt text-green-600 mr-2">
-         </i>
-         Giảm 50k cho đơn hàng có giá trị trên 300k (Mã: GIAM50).
-        </li>
-        <li class="flex items-center">
-         <i class="fas fa-ticket-alt text-green-600 mr-2">
-         </i>
-         Giảm 70k cho đơn hàng có giá trị trên 500k (Mã: GIAM70).
-        </li>
-       </ul>
+       <div id="discount-options">
+        <label>
+            <input type="radio" name="discount" value="15000" onclick="applyDiscount(this.value)">
+            Giảm 15k cho đơn hàng có giá trị trên 100k (Mã: GIAM15)
+        </label><br>
+        <label>
+            <input type="radio" name="discount" value="35000" onclick="applyDiscount(this.value)">
+            Giảm 35k cho đơn hàng có giá trị trên 200k (Mã: GIAM35)
+        </label><br>
+        <label>
+            <input type="radio" name="discount" value="50000" onclick="applyDiscount(this.value)">
+            Giảm 50k cho đơn hàng có giá trị trên 300k (Mã: GIAM50)
+        </label><br>
+        <label>
+            <input type="radio" name="discount" value="70000" onclick="applyDiscount(this.value)">
+            Giảm 70k cho đơn hàng có giá trị trên 500k (Mã: GIAM70)
+        </label>
+    </div>
       </div>
       <!-- Payment Methods Section -->
       <div class="border border-gray-300 p-4">
@@ -313,60 +236,46 @@
       </div>
      </div>
     </div>
-     Phương thức vận chuyển
-    </h3>
-    <div class="flex items-center justify-between p-4 bg-gray-200 border border-gray-300 rounded">
-     <div>
-      <p class="text-gray-600">
-       Nhanh
-      </p>
-      <p class="text-gray-600">
-       Giao hàng nhanh chóng, an toàn.
-      </p>
-     </div>
-     <div class="text-right">
-      <p class="text-gray-600">
-       35,000đ
-      </p>
-      <p class="text-gray-600 line-through">
-       50,000đ
-      </p>
-     </div>
+    <div class="shipping-section">
+        <div class="shipping-methods">
+            <h3><i class="fas fa-truck"></i> Phương thức vận chuyển</h3>
+            <p><strong>Nhanh:</strong> Đảm bảo nhận hàng vào ngày mai.</p>
+            <p style="color: #888;">Hoặc chọn Hỏa tốc để Đảm bảo nhận hàng vào hôm nay <i class="fas fa-chevron-right"></i></p>
+            <p><del>16,500đ</del> <strong>8,500đ</strong></p>
+        </div>
     </div>
-   </div>
-   <div class="mt-6">
-    <h3 class="text-lg font-semibold">
+   <div class="max-w-4xl mx-auto p-4 bg-white shadow-md mt-6">
+    <h2 class="text-lg font-bold mb-4">
      Đơn hàng (1 sản phẩm)
-    </h3>
-    <div class="flex items-center justify-between p-4 bg-gray-200 border border-gray-300 rounded">
-     <img alt="Salad tôm" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/cKJ77xIpKx7zC56Z83b7mEtwDSMezF5j7aj3639CRAFbeSpTA.jpg" width="100"/>
-     <div class="ml-4">
-      <h3 class="text-lg font-semibold">
+    </h2>
+    <div class="flex justify-between items-center mb-4">
+     <img alt="Salad tôm" class="w-24 h-24 object-cover mr-4" height="100" src="https://storage.googleapis.com/a1aa/image/Y0eyTBsdtqzVCyIePpJswqK2h8SX3uERX25dJlb0kQOtpBrTA.jpg" width="100"/>
+     <div>
+      <p class="text-gray-700">
        HÓA ĐƠN THANH TOÁN
-      </h3>
-      <p class="text-gray-600">
-       Tổng tiền hàng: 75,000đ
       </p>
       <p class="text-gray-600">
-       Tổng phí vận chuyển: 35,000đ
+       Tổng tiền hàng: 75.000 VNĐ
       </p>
       <p class="text-gray-600">
-       Giảm giá: 0đ
+       Tổng phí vận chuyển: 85.500 VNĐ
       </p>
-      <p class="text-red-500 font-bold mt-2">
-       Tổng thanh toán: 83,500đ
+      <p class="text-gray-600">
+       Giảm giá: 0 VNĐ
+      </p>
+      <p class="text-green-600 font-bold">
+       Tổng tiền: 83.500 VNĐ
       </p>
      </div>
     </div>
-   </div>
-   <div class="mt-6 flex justify-between items-center">
-    <p class="text-lg font-semibold">
-     Tổng thanh toán: 83,500đ
-    </p>
-    <button class="bg-green-500 text-white px-4 py-2 rounded">
-     Đặt hàng
-    </button>
-   </div>
+    <div class="flex justify-between items-center">
+     <p class="text-gray-700">
+      Tổng thanh toán: 83.500đ
+     </p>
+     <button class="bg-green-600 text-white px-4 py-2 rounded">
+      Đặt hàng
+     </button>
+    </div>
   </div>
  </body>
 </html>
