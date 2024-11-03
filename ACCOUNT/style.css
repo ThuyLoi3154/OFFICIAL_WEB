@@ -1,0 +1,807 @@
+/* General Styles */
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('fonts/InstrumentSans-Regular.ttf') format('truetype'); /* Update with the correct path */
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Montserrat', 'Instrument Sans';
+    background-color: #f7fafc; /* Equivalent to bg-gray-100 */
+}
+
+/* Căn chỉnh nút Order Now */
+.order-now-button {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 250px; /* Đẩy nút lên trên */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+.order-now-button:hover {
+    background: white;
+    color: #333;
+}
+
+
+/* Container for the entire account page */
+.account-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f8f4eb;
+}
+
+/* Sidebar container */
+.sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar items */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #4a503d;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Sidebar item icons */
+.sidebar-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Highlight active item in sidebar */
+.sidebar-item-active {
+    color: #c44c33;
+}
+
+/* Content container */
+.content {
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title section for the content */
+.content-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4a503d;
+    margin-bottom: 10px;
+}
+
+/* Subtitle section for content */
+.content-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Form section */
+.account-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Form input styles */
+.account-form input[type="text"],
+.account-form input[type="email"],
+.account-form input[type="password"],
+.account-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Gender radio buttons */
+.gender-container {
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+
+/* Avatar section */
+.avatar-container {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Button for saving */
+.save-button {
+    grid-column: span 2;
+    width: 120px;
+    padding: 10px;
+    background-color: #c44c33;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #a63b27;
+}
+
+/* Button for changing details */
+.change-button {
+    padding: 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #c44c33;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.change-button:hover {
+    background-color: #a63b27;
+}
+
+/* Section for email and phone number with change buttons */
+.email-phone-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Placeholder Avatar Styling */
+.avatar-preview {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    color: #999;
+    background-color: #f8f8f8;
+}
+
+
+/* Order Process Section */
+.order-steps {
+    background-color: #065f46;
+    padding: 3rem 0;
+    color: #271f1f;
+}
+
+.order-step {
+    background-color: #064e3b;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.slogan{
+    color: #464E2E;
+    text-align: center;
+}
+.cachdathang{
+    background-color: #e8dec6;
+}
+.step{
+    background-color: #E9E5D6;
+}
+.STEP1{
+    color: #362706;
+}
+.step2{
+    color: grey;
+    font-size: small;
+}
+
+.order-step {
+    display: flex;
+    align-items: start;
+    gap: 16px; /* Điều chỉnh khoảng cách theo ý muốn, ví dụ: 20px hoặc 24px */
+}
+
+.image-container1 {
+    flex: 0 0 30%;
+}
+.container h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Playfair, serif;
+    color: #064e3b;
+}
+.text-container1 {
+    flex: 1; /* Văn bản chiếm toàn bộ phần còn lại */
+    text-align: left;
+    padding-top: 10%; /* Căn chỉnh từ trên xuống */
+    font-family: Montserrat, sans-serif;
+}
+
+.text-container1 h3 {
+    margin: 0;
+    color: #362706;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.text-container1 p {
+    margin: 0;
+    padding-top: 5px;
+    color: grey;
+    font-size: 0.9em;
+}
+/*section3-food*/
+.food-section {
+    background-color: #3b2f1e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.main-title {
+    font-size:35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: Playfair;
+}
+
+.sub-title {
+    font-size: 1.5em;
+    color: #a9a9a9;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    font-family: playfair;
+}
+
+.category-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 3%;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width: fit-content;
+    left: 20px;
+    font-size: 20px;
+}
+.label-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.food-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.food-card {
+    display: flex;
+    background-color: #e5e0d9;
+    font-family:Montserrat ;
+    color: #333;
+    border-radius: 8px;
+    width: 410px;
+    height: 230px;
+    padding: 20px;
+    padding-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 2%;
+    padding-bottom: 10%;
+}
+
+.food-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.food-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.food-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+.order-step {
+    display: flex; /* Để hình ảnh và văn bản nằm trên cùng một hàng */
+    align-items: center; /* Căn giữa hình ảnh và văn bản */
+    gap: 20px; /* Khoảng cách giữa hình ảnh và văn bản */
+    background-color: #E9E5D6; /* Màu nền */
+    padding: 1.5rem; /* Giữ lại khoảng cách padding */
+    border-radius: 0.5rem; /* Bo góc cho các khối */
+}
+h2{
+    color: #464E2E;
+}
+.image-container1 {
+    flex: 0 0 30%; /* Hình ảnh chiếm 30% chiều rộng */
+}
+
+/* Review Container */
+.review-container {
+    background-color: #464E2E; /* Green background */
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Review Header */
+.review-header {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Review Cards */
+.review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Review Card */
+.review-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Review Rating */
+.review-rating {
+    font-size: 1.2em;
+    color: #ffc107; /* Gold color for stars */
+    margin-bottom: 10px;
+}
+
+/* Review Title */
+.review-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Review Body */
+.review-body {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Reviewer Info */
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Reviewer Avatar */
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Reviewer Details */
+.reviewer-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    color: #777;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    font-style: italic;
+    font-size: 0.8em;
+}
+/* styles.css */
+
+/* Main banner container */
+.welcome-banner {
+    background-color: #4a503d; /* Dark green color */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 50px 20px;
+    width:100%;
+}
+
+/* Welcome text section */
+.welcome-text h2 {
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F5DAD2;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styles */
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #464E2E;
+}
+
+.btn-secondary {
+    background-color: #464E2E;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: 600px;
+}
+
+.menu-list li {
+    display: flex;
+    align-items: center; /* Căn chỉnh dọc để icon và text thẳng hàng */
+    padding: 15px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-list li img {
+    margin-right: 10px; /* Khoảng cách giữa icon và text */
+    width: 20px;
+    height: 20px;
+}
+
+.menu-list li.active {
+    color: #000; /* Màu chữ nổi bật cho mục đang được chọn */
+}
+.menu-list li.active1 {
+    color: #000; /* Màu chữ nổi bật cho mục đang được chọn */
+}
+.menu-list li.active2 {
+    color: #000; /* Màu chữ nổi bật cho mục đang được chọn */
+}
+.menu-list li.active3 {
+    color: #A72B0C; /* Màu chữ nổi bật cho mục đang được chọn */
+}
+.account-info {
+    width: 1050px;
+    height: 410px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 600px;
+    align-items: center;
+}
+
+.account-info h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.account-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.account-info hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    flex: 0 0 30%;
+    width: 30%;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.input-wrapper input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.change-btn {
+    background-color: #a44b3f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.change-btn:hover {
+    background-color: #913d32;
+}
+
+.radio-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+.form-group select, .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+}
+
+.save-btn {
+    background-color: #a44b3f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.save-btn:hover {
+    background-color: #913d32;
+}
+
+
+.sidebar{
+    height: 600px;
+    align-items: center;
+    margin-top: 1.5%;
+}
+#birth {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 60%;
+}
+.kichthuoc{
+    font-size: 16px;
+}
+#avatar{
+    width: 30%;
+    margin-right: 10%;
+}
+.active{
+    color: #ff0011;
+    font-style: unset;
+}
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group input[type="email"],
+.form-group select {
+    width: 70%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.gender-container {
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+}
+.account-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Nhãn và input chia làm 2 cột */
+    gap: 20px 10px; /* Khoảng cách giữa các nhãn và input */
+    align-items: center; /* Căn chỉnh các thành phần theo chiều dọc */
+}
+.account-form .form-group {
+    display: contents; /* Để mỗi label và input nằm trên cùng một dòng */
+}
+.account-form label {
+    text-align: right; /* Đảm bảo nhãn căn lề phải */
+    margin-right: 20px; /* Khoảng cách giữa nhãn và input */
+}
+
+.account-form select,
+.account-form input,
+.account-form input[type="file"] {
+    width: 100%; /* Đảm bảo input rộng đủ để căn đúng kích thước */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.save-button {
+    grid-column: 1 / -1; /* Đặt button nằm giữa theo chiều ngang */
+    padding: 10px 20px;
+    background-color: #c44c33;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #a63b27;
+}
+.namgender, .nugender {
+    font-weight: normal;
+}
+.khung{
+    width: 40%;
+}
+#email{
+    width: 60%;
+    margin-right: 10%;
+}
+#phone{
+    width: 60%;
+    margin-right: 10%;
+}
+
+/* Table Styling for Point Section */
+.point-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.point-table th, .point-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #777;
+}
+
+.point-table th {
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #333;
+}
+/* New Address Button Styles */
+.new-address-btn {
+    background-color: #a44b3f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+}
+
+.new-address-btn:hover {
+    background-color: #913d32;
+}
